@@ -121,22 +121,23 @@ public class GameMain extends JPanel implements MouseListener{
 			statusBar.setText("'O' Won! Click to play again."); 
 
 		}
+
+		//BONUS draw winners line - completed for each win instance with particular color
 		
-		//BONUS draw winners line
 		if ((board.cells[0][0].content == Player.Cross && board.cells[1][1].content == Player.Cross && board.cells[2][2].content == Player.Cross )){
 			g.setColor(Color.red);
 			g.drawLine(0, 0, GameMain.CANVAS_WIDTH, GameMain.CANVAS_HEIGHT);
 		} else if ((board.cells[0][0].content == Player.Nought && board.cells[1][1].content == Player.Nought && board.cells[2][2].content == Player.Nought )){
 			g.setColor(Color.blue);
 			g.drawLine(0, 0, GameMain.CANVAS_WIDTH, GameMain.CANVAS_HEIGHT);
-			
+
 		} else if ((board.cells[0][2].content == Player.Cross && board.cells[1][1].content == Player.Cross && board.cells[2][0].content == Player.Cross )){
 			g.setColor(Color.red);
 			g.drawLine(0, GameMain.CANVAS_HEIGHT, GameMain.CANVAS_HEIGHT, 0);
 		} else if ((board.cells[0][2].content == Player.Nought && board.cells[1][1].content == Player.Nought && board.cells[2][0].content == Player.Nought )){
 			g.setColor(Color.blue);
 			g.drawLine(0, GameMain.CANVAS_HEIGHT, GameMain.CANVAS_HEIGHT, 0);
-			
+
 		} else  if ((board.cells[0][1].content == Player.Cross && board.cells[1][1].content == Player.Cross && board.cells[2][1].content == Player.Cross )){
 			g.setColor(Color.red);
 			g.drawLine(GameMain.CANVAS_HEIGHT/2, 0, GameMain.CANVAS_HEIGHT/2, GameMain.CANVAS_WIDTH);
